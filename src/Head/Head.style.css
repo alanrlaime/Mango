@@ -1,0 +1,41 @@
+header{
+    width: 90% ;
+    background-color: rgb(44, 44, 44);
+    position:fixed;
+    z-index: 1;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 60px;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    flex-wrap: wrap-reverse;
+}
+
+header ul li a{
+    border: 1px solid black;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    color: white;
+}
+
+header ul li a div i{
+    font-size: 1em;
+}
+
+header ul li a:hover{
+    background-color: rgb(35, 171, 255);
+    border: 1px solid white;
+    transition: 0.3s;
+}
