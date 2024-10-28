@@ -1,6 +1,6 @@
 header{
     width: 90% ;
-    background-color: rgb(44, 44, 44);
+    background-color: #243642;
     position:fixed;
     z-index: 1;
 }
@@ -14,7 +14,7 @@ header{
 header ul{
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap-reverse;
 }
 
@@ -35,7 +35,7 @@ header ul li a div i{
 }
 
 header ul li a:hover{
-    background-color: rgb(35, 171, 255);
+    background-color: #387478;
     border: 1px solid white;
     transition: 0.3s;
 }
