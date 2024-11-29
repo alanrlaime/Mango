@@ -1,0 +1,13 @@
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 2ex;
+    border: solid 0.1ex black;
+    margin: 2ex;
+    max-width: 80ex;
+    gap: 1ex;
+}
+
+form h1{
+    text-align: center;
+}
