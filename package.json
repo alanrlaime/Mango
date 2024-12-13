@@ -1,7 +1,7 @@
 {
   "name": "mango",
   "private": true,
-  "homepages": "https://alanrlaime.github.io/Mango"
+  "homepages": "https://alanrlaime.github.io/Mango",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
