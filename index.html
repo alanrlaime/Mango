@@ -4,9 +4,275 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/pictures/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ManGo Shop</title>
+    <title>ManGo Shop - Tu Tienda de Frutas Tropicales</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        color: #333;
+      }
+
+      header {
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #764ba2;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      nav {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #764ba2;
+      }
+
+      .cart-icon {
+        background: #764ba2;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .cart-icon:hover {
+        background: #667eea;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 3rem auto;
+        padding: 0 1rem;
+      }
+
+      .hero {
+        background: white;
+        border-radius: 15px;
+        padding: 3rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+        color: #764ba2;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 1.5rem;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 25px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+      }
+
+      .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .product-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-image {
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+      }
+
+      .product-info {
+        padding: 1.5rem;
+      }
+
+      .product-name {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+
+      .product-price {
+        font-size: 1.5rem;
+        color: #764ba2;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .btn-add {
+        width: 100%;
+        background: #764ba2;
+        color: white;
+        padding: 0.75rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background 0.3s ease;
+      }
+
+      .btn-add:hover {
+        background: #667eea;
+      }
+
+      footer {
+        background: rgba(255, 255, 255, 0.95);
+        text-align: center;
+        padding: 2rem;
+        margin-top: 3rem;
+        color: #666;
+      }
+
+      @media (max-width: 768px) {
+        .header-container {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .hero h1 {
+          font-size: 1.8rem;
+        }
+
+        nav {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    </style>
   </head>
   <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">🥭 ManGo Shop</div>
+        <nav>
+          <a href="#inicio">Inicio</a>
+          <a href="#productos">Productos</a>
+          <a href="#contacto">Contacto</a>
+          <div class="cart-icon">🛒 Carrito</div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <h1>¡Bienvenido a ManGo Shop!</h1>
+        <p>Descubre nuestras frutas tropicales frescas y de alta calidad</p>
+        <button class="btn-primary">Explorar Productos</button>
+      </section>
+
+      <section class="products" id="productos">
+        <div class="product-card">
+          <div class="product-image">🥭</div>
+          <div class="product-info">
+            <div class="product-name">Mango Premium</div>
+            <div class="product-price">$8.99</div>
+            <button class="btn-add">Agregar al carrito</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">🍌</div>
+          <div class="product-info">
+            <div class="product-name">Plátano Orgánico</div>
+            <div class="product-price">$3.99</div>
+            <button class="btn-add">Agregar al carrito</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">🍍</div>
+          <div class="product-info">
+            <div class="product-name">Piña Dulce</div>
+            <div class="product-price">$5.99</div>
+            <button class="btn-add">Agregar al carrito</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">🥥</div>
+          <div class="product-info">
+            <div class="product-name">Coco Fresco</div>
+            <div class="product-price">$4.99</div>
+            <button class="btn-add">Agregar al carrito</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacto">
+      <p>&copy; 2026 ManGo Shop. Todos los derechos reservados.</p>
+      <p>Contacto: info@mangoshop.com | Teléfono: +1 (555) 123-4567</p>
+    </footer>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
